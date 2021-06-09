@@ -1,5 +1,7 @@
+# noqa
+
 def greeting(name):
-    """A simple greeting.
+    """Give a simple greeting.
 
     Args:
         name (str): Name of person
