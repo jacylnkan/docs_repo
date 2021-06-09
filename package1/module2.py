@@ -1,3 +1,5 @@
+# noqa
+
 def greeting(name):
     """A simple greeting.
 
