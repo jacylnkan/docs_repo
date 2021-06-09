@@ -1,1 +1,1 @@
-# noqa
+"""Package 1."""
