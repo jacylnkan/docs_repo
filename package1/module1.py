@@ -1,5 +1,7 @@
+"""Module with functions."""
+
 def add_two_numbers(a, b):
-    """Adds two numbers.
+    """Add two numbers.
 
     Args:
         a (int): First number

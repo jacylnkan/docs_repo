@@ -1,3 +1,5 @@
+"""Another module."""
+
 from ..package1.module1 import add_two_numbers, multiply_two_numbers 
 
 def multiply_then_add(a, b, c):
