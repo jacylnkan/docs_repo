@@ -16,3 +16,12 @@ def multiply_then_add(a, b, c):
     sum_val = add_two_numbers(a, b)
     result = multiply_two_numbers(sum_val, c)
     return result 
+
+
+def new_function_v2():
+    """Display string for version 2.
+
+    Returns:
+        str: Describes version.
+    """
+    return "This is version 2."
