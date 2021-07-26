@@ -39,7 +39,7 @@ jobs:
           name: Set up aws
           command: |
             pip install awscli
-            LOGIN_TO_ECR="$(aws ecr get-login --no-include-email --region us-west-2)"
+            LOGIN_TO_ECR="$(aws ecr get-login --no-include-email --profile personal)"
             ${LOGIN_TO_ECR}
       - run:
           name: Upload to S3
