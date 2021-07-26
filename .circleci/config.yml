@@ -10,7 +10,7 @@ orbs:
 workflows:
   sample:  # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
-    # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
+    # For more details on extending your workflow, see the configuration docs_code: https://circleci.com/docs/2.0/configuration-reference/#workflows
     jobs:
       - build-and-test
 
@@ -35,3 +35,8 @@ jobs:
           pkg-manager: pip
           # app-dir: ~/project/package-directory/  # If you're requirements.txt isn't in the root directory.
           # pip-dependency-file: test-requirements.txt  # if you have a different name for your requirements file, maybe one that combines your runtime and test requirements.
+      - run:
+          name: Upload to S3
+          command: |
+            pdoc --docformat google -o ./output /home/jackie/etb/other/docs_repo/docs_code
+            aws s3 sync ./output s3://mock-doc-site.com --delete
