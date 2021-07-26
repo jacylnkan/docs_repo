@@ -6,3 +6,6 @@ __pycache__/
 
 # Environments
 dr_venv/
+
+# Output
+output/

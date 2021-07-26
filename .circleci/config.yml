@@ -39,10 +39,8 @@ jobs:
           name: Set up aws
           command: |
             pip install awscli
-            LOGIN_TO_ECR="$(aws ecr get-login --no-include-email --profile personal)"
-            ${LOGIN_TO_ECR}
       - run:
           name: Upload to S3
           command: |
             pdoc --docformat google -o ./output ./docs_code
-            aws s3 sync ./output s3://mock-doc-site.com --delete
+            aws s3 sync ./output s3://mock-doc-site.com --delete --profile personal
