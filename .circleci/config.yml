@@ -38,11 +38,11 @@ jobs:
       - run:
           name: Set up aws
           command: |
-            pip install --upgrade awscli
-            LOGIN_TO_ECR="$(aws ecr get-login --no-include-email)"
+            pip install awscli
+            LOGIN_TO_ECR="$(aws ecr get-login --no-include-email --region us-west-2)"
             ${LOGIN_TO_ECR}
       - run:
           name: Upload to S3
           command: |
             pdoc --docformat google -o ./output ./docs_code
-            aws s3 sync ./output s3://mock-doc-site.com --delete --region us-west-2
+            aws s3 sync ./output s3://mock-doc-site.com --delete
