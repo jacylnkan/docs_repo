@@ -38,5 +38,5 @@ jobs:
       - run:
           name: Upload to S3
           command: |
-            pdoc --docformat google -o ./output /home/jackie/etb/other/docs_repo/docs_code
+            pdoc --docformat google -o ./output ./docs_code
             aws s3 sync ./output s3://mock-doc-site.com --delete
